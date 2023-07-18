@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <body>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Photo</th>
+                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                </tr>
+                {% for img in images %}
+                <tr>
+                    <td>{{img.Name}}</td>
+                    <td><a href="{% url 'details' img.id %}"><img src="{{ img.Photo.url }}" height="100px" width="200px"></a></td>
+                    
+                </tr>
+                {% endfor %}</td>
+                </tr>
+            </table>
+        </body>
+    </head>
+</html>

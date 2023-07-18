@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <body>
+            {{ user.name }}
+            {{ user.place }}
+            {{ user.age }}
+            <form action="" method="post"></form>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <a href="{% url 'update' user.id %}">update</a>
+            <a href="{% url 'changepassword' user.id %}">changepassword</a>
+            <a href="{% url 'logout' %}">logout</a>
+        </body>
+    </head>
+</html>
